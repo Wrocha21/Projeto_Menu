@@ -1,0 +1,153 @@
+
+
+/*Configurações Geral*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    min-width: 100vh;
+    background-color: rgb(208, 227, 228);
+}
+
+main {
+    padding: 20px;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0px 0px 2px 2px rgb(173, 173, 173);
+}
+
+#sidebar_content {
+    position: relative;
+    padding: 12px;
+}
+
+.User  {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.User > #user_avatar {
+
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+#user_infos {
+    display: flex;
+    flex-direction: column;
+}
+
+#user_infos span:last-child {
+    font-size: 0.7em;
+    color: rgb(94, 93, 93);
+}
+
+ul#side-items {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    list-style: none;
+}
+
+ul#side-items > li.side-item {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+ul#side-items > li.side-item.active {
+    background-color: rgb(162, 0, 255);
+}
+
+ul#side-items > li.side-item:hover:not(.active), #logout_btn:hover {
+    background-color: rgb(206, 205, 205);
+}
+
+ul#side-items > li.side-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+ul#side-items > li.side-item.active a {
+    color: white;
+}
+
+ul#side-items > li.side-item a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+#logout {
+    border-top: 1px solid white;
+    padding: 12px;
+}
+
+#logout_btn {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 14px;
+    gap: 20px;
+    border: none;
+    border-radius: 8px;
+
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+#open_btn {
+    position: absolute;
+    background-color: rgb(162, 0, 255);
+    color: white;
+    top: 30px;
+    right: -16px;
+    padding: 4px;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 0px 2px 2px 0px;
+}
+
+.item_description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#sidebar.open-sidebar {
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item_description {
+    width: 150px;
+}
+
+#sidebar.open-sidebar .side-item > a {
+    justify-content: flex-start;
+    gap: 14px;
+}
