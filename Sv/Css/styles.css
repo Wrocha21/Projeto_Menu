@@ -9,11 +9,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+body, html {
     display: flex;
     min-height: 100vh;
     background-color: rgb(208, 227, 228);
-    overflow-x: hidden;
 }
 
 main {
