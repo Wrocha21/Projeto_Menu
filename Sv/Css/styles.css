@@ -73,7 +73,6 @@ ul#side-items {
 ul#side-items > li.side-item {
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 20px;
     font-size: 0.9em;
     cursor: pointer;
 }
@@ -166,7 +165,6 @@ ul#side-items > li.side-item a i {
 }
 
 #sidebar.open-sidebar .side-item a {
-        justify-content: flex-start;
-        gap: 14px
-        ;
+    justify-content: flex-start;
+    gap: 14px;
 }
