@@ -13,6 +13,7 @@ body {
     display: flex;
     min-height: 100vh;
     background-color: rgb(208, 227, 228);
+    overflow-x: hidden;
 }
 
 main {
@@ -26,7 +27,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 633px;
+    height: 100vh;
     background-color: white;
     box-shadow: 0px 0px 2px 2px rgb(173, 173, 173);
     transition: all .5s;
