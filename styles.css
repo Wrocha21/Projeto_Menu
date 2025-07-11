@@ -16,7 +16,10 @@ body {
 }
 
 main {
+    position: fixed;
     padding: 20px;
+    z-index: 1;
+    padding-left: calc(82px + 20px);
 }
 
 #sidebar {
@@ -26,6 +29,9 @@ main {
     height: 100vh;
     background-color: white;
     box-shadow: 0px 0px 2px 2px rgb(173, 173, 173);
+    transition: all .5s;
+    min-width: 82px;
+    z-index: 2;
 }
 
 #sidebar_content {
@@ -83,6 +89,7 @@ ul#side-items > li.side-item:hover:not(.active), #logout_btn:hover {
 ul#side-items > li.side-item a {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: black;
 }
@@ -132,22 +139,34 @@ ul#side-items > li.side-item a i {
     border-radius: 0px 2px 2px 0px;
 }
 
+#open_btn_icon {
+    transition: transform .3s ease;
+}
+
+.open-sidebar #open_btn_icon {
+    transform: rotate(180deg);
+}
+
 .item_description {
     width: 0px;
+    height: 0px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    transition: width .6s;
 }
 
 #sidebar.open-sidebar {
-    min-width: 15%;
+  min-width: 15%;
 }
 
-#sidebar.open-sidebar .item_description {
-    width: 150px;
+#sidebar.open-sidebar .item_description  {
+  width: 150px;
+  height: auto; /* ou o tamanho desejado */
 }
 
-#sidebar.open-sidebar .side-item > a {
-    justify-content: flex-start;
-    gap: 14px;
+#sidebar.open-sidebar .side-item a {
+        justify-content: flex-start;
+        gap: 14px
+        ;
 }
